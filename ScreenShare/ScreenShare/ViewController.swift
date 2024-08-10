@@ -47,7 +47,15 @@ class ViewController: UIViewController {
     }
     
     @objc private func startScreenShareButtonAction() {
-        print("stsart screen share")
+        let picker = RPSystemBroadcastPickerView()
+        picker.showsMicrophoneButton = false
+        picker.preferredExtension = "com.J-Min.ScreenShare.BroadCast"
+        
+        for subview in picker.subviews {
+            if let button = subview as? UIButton {
+                button.sendActions(for: UIControl.Event.allTouchEvents)
+            }
+        }
     }
 
 }
