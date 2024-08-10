@@ -19,7 +19,34 @@
 		0EC3802D2C678F6900ECA726 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC3802B2C678F6900ECA726 /* Main.storyboard */; };
 		0EC3802F2C678F6A00ECA726 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EC3802E2C678F6A00ECA726 /* Assets.xcassets */; };
 		0EC380322C678F6A00ECA726 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EC380302C678F6A00ECA726 /* LaunchScreen.storyboard */; };
+		0EFF04EE2C6790AE004E1DD8 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFF04ED2C6790AE004E1DD8 /* ReplayKit.framework */; };
+		0EFF04F12C6790AE004E1DD8 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */; };
+		0EFF05042C6790AE004E1DD8 /* BroadCast.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0EFF04EB2C6790AE004E1DD8 /* BroadCast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0EFF05022C6790AE004E1DD8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0EC37FED2C678EC800ECA726 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0EFF04EA2C6790AE004E1DD8;
+			remoteInfo = BroadCast;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0EFF05052C6790AE004E1DD8 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				0EFF05042C6790AE004E1DD8 /* BroadCast.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0EC37FF52C678EC800ECA726 /* ScreenShare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScreenShare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -38,6 +65,11 @@
 		0EC3802E2C678F6A00ECA726 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EC380312C678F6A00ECA726 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0EC380332C678F6A00ECA726 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EFF04EB2C6790AE004E1DD8 /* BroadCast.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BroadCast.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EFF04ED2C6790AE004E1DD8 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		0EFF04F22C6790AE004E1DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0EFF04F92C6790AE004E1DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +87,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EFF04E82C6790AE004E1DD8 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EFF04EE2C6790AE004E1DD8 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -63,6 +103,8 @@
 			children = (
 				0EC37FF72C678EC800ECA726 /* ScreenShare */,
 				0EC380242C678F6900ECA726 /* ScreenShare_Receiver */,
+				0EFF04EF2C6790AE004E1DD8 /* BroadCast */,
+				0EFF04EC2C6790AE004E1DD8 /* Frameworks */,
 				0EC37FF62C678EC800ECA726 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -72,6 +114,7 @@
 			children = (
 				0EC37FF52C678EC800ECA726 /* ScreenShare.app */,
 				0EC380232C678F6900ECA726 /* ScreenShare_Receiver.app */,
+				0EFF04EB2C6790AE004E1DD8 /* BroadCast.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +147,24 @@
 			path = ScreenShare_Receiver;
 			sourceTree = "<group>";
 		};
+		0EFF04EC2C6790AE004E1DD8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0EFF04ED2C6790AE004E1DD8 /* ReplayKit.framework */,
+				0EFF04F92C6790AE004E1DD8 /* UIKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0EFF04EF2C6790AE004E1DD8 /* BroadCast */ = {
+			isa = PBXGroup;
+			children = (
+				0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */,
+				0EFF04F22C6790AE004E1DD8 /* Info.plist */,
+			);
+			path = BroadCast;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -114,10 +175,12 @@
 				0EC37FF12C678EC800ECA726 /* Sources */,
 				0EC37FF22C678EC800ECA726 /* Frameworks */,
 				0EC37FF32C678EC800ECA726 /* Resources */,
+				0EFF05052C6790AE004E1DD8 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0EFF05032C6790AE004E1DD8 /* PBXTargetDependency */,
 			);
 			name = ScreenShare;
 			productName = ScreenShare;
@@ -141,6 +204,23 @@
 			productReference = 0EC380232C678F6900ECA726 /* ScreenShare_Receiver.app */;
 			productType = "com.apple.product-type.application";
 		};
+		0EFF04EA2C6790AE004E1DD8 /* BroadCast */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0EFF050B2C6790AE004E1DD8 /* Build configuration list for PBXNativeTarget "BroadCast" */;
+			buildPhases = (
+				0EFF04E72C6790AE004E1DD8 /* Sources */,
+				0EFF04E82C6790AE004E1DD8 /* Frameworks */,
+				0EFF04E92C6790AE004E1DD8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BroadCast;
+			productName = BroadCast;
+			productReference = 0EFF04EB2C6790AE004E1DD8 /* BroadCast.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +235,9 @@
 						CreatedOnToolsVersion = 15.2;
 					};
 					0EC380222C678F6900ECA726 = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					0EFF04EA2C6790AE004E1DD8 = {
 						CreatedOnToolsVersion = 15.2;
 					};
 				};
@@ -174,6 +257,7 @@
 			targets = (
 				0EC37FF42C678EC800ECA726 /* ScreenShare */,
 				0EC380222C678F6900ECA726 /* ScreenShare_Receiver */,
+				0EFF04EA2C6790AE004E1DD8 /* BroadCast */,
 			);
 		};
 /* End PBXProject section */
@@ -196,6 +280,13 @@
 				0EC380322C678F6A00ECA726 /* LaunchScreen.storyboard in Resources */,
 				0EC3802F2C678F6A00ECA726 /* Assets.xcassets in Resources */,
 				0EC3802D2C678F6900ECA726 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0EFF04E92C6790AE004E1DD8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -222,7 +313,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0EFF04E72C6790AE004E1DD8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0EFF04F12C6790AE004E1DD8 /* SampleHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0EFF05032C6790AE004E1DD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0EFF04EA2C6790AE004E1DD8 /* BroadCast */;
+			targetProxy = 0EFF05022C6790AE004E1DD8 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0EC37FFE2C678EC800ECA726 /* Main.storyboard */ = {
@@ -382,6 +489,7 @@
 		0EC3800A2C678EC900ECA726 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -411,6 +519,7 @@
 		0EC3800B2C678EC900ECA726 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -495,6 +604,56 @@
 			};
 			name = Release;
 		};
+		0EFF05062C6790AE004E1DD8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PRV428ULN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BroadCast/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BroadCast;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.J-Min.ScreenShare.BroadCast";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		0EFF05072C6790AE004E1DD8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8PRV428ULN;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BroadCast/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = BroadCast;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.J-Min.ScreenShare.BroadCast";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -521,6 +680,15 @@
 			buildConfigurations = (
 				0EC380352C678F6A00ECA726 /* Debug */,
 				0EC380362C678F6A00ECA726 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0EFF050B2C6790AE004E1DD8 /* Build configuration list for PBXNativeTarget "BroadCast" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0EFF05062C6790AE004E1DD8 /* Debug */,
+				0EFF05072C6790AE004E1DD8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
