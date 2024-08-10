@@ -20,6 +20,7 @@
 		0EFF04EE2C6790AE004E1DD8 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0EFF04ED2C6790AE004E1DD8 /* ReplayKit.framework */; };
 		0EFF04F12C6790AE004E1DD8 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */; };
 		0EFF05042C6790AE004E1DD8 /* BroadCast.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0EFF04EB2C6790AE004E1DD8 /* BroadCast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0EFF050F2C679896004E1DD8 /* GroupUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 		0EFF04F92C6790AE004E1DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		0EFF050C2C679817004E1DD8 /* ScreenShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenShare.entitlements; sourceTree = "<group>"; };
 		0EFF050D2C679832004E1DD8 /* BroadCast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BroadCast.entitlements; sourceTree = "<group>"; };
+		0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupUserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				0EC380012C678EC900ECA726 /* Assets.xcassets */,
 				0EC380032C678EC900ECA726 /* LaunchScreen.storyboard */,
 				0EC380062C678EC900ECA726 /* Info.plist */,
+				0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */,
 			);
 			path = ScreenShare;
 			sourceTree = "<group>";
@@ -295,6 +298,7 @@
 			files = (
 				0EC37FFD2C678EC800ECA726 /* ViewController.swift in Sources */,
 				0EC37FF92C678EC800ECA726 /* AppDelegate.swift in Sources */,
+				0EFF050F2C679896004E1DD8 /* GroupUserDefaults.swift in Sources */,
 				0EC37FFB2C678EC800ECA726 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
