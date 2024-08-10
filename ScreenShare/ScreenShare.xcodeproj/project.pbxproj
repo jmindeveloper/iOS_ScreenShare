@@ -122,14 +122,11 @@
 		0EC37FF72C678EC800ECA726 /* ScreenShare */ = {
 			isa = PBXGroup;
 			children = (
+				0EFF05122C679939004E1DD8 /* Manager */,
+				0EFF05112C67992A004E1DD8 /* ViewController */,
+				0EFF05102C67991D004E1DD8 /* Application */,
 				0EFF050C2C679817004E1DD8 /* ScreenShare.entitlements */,
-				0EC37FF82C678EC800ECA726 /* AppDelegate.swift */,
-				0EC37FFA2C678EC800ECA726 /* SceneDelegate.swift */,
-				0EC37FFC2C678EC800ECA726 /* ViewController.swift */,
-				0EC380012C678EC900ECA726 /* Assets.xcassets */,
-				0EC380032C678EC900ECA726 /* LaunchScreen.storyboard */,
 				0EC380062C678EC900ECA726 /* Info.plist */,
-				0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */,
 			);
 			path = ScreenShare;
 			sourceTree = "<group>";
@@ -164,6 +161,33 @@
 				0EFF04F22C6790AE004E1DD8 /* Info.plist */,
 			);
 			path = BroadCast;
+			sourceTree = "<group>";
+		};
+		0EFF05102C67991D004E1DD8 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				0EC37FF82C678EC800ECA726 /* AppDelegate.swift */,
+				0EC37FFA2C678EC800ECA726 /* SceneDelegate.swift */,
+				0EC380012C678EC900ECA726 /* Assets.xcassets */,
+				0EC380032C678EC900ECA726 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		0EFF05112C67992A004E1DD8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0EC37FFC2C678EC800ECA726 /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		0EFF05122C679939004E1DD8 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */,
+			);
+			path = Manager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
