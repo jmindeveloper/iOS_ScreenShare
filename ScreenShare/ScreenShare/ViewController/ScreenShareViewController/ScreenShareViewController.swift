@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ScreenShareViewController.swift
 //  ScreenShare
 //
 //  Created by J_Min on 8/10/24.
@@ -8,7 +8,7 @@
 import UIKit
 import ReplayKit
 
-class ViewController: UIViewController {
+class ScreenShareViewController: UIViewController {
 
     private let startScreenShareButton: UIButton = {
         let button = UIButton()
@@ -19,6 +19,8 @@ class ViewController: UIViewController {
         
         return button
     }()
+    
+    private let viewModel = ScreenShareViewModel()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -56,6 +58,8 @@ class ViewController: UIViewController {
                 button.sendActions(for: UIControl.Event.allTouchEvents)
             }
         }
+        
+        viewModel.observeBroadCastImageBuffer()
     }
 
 }

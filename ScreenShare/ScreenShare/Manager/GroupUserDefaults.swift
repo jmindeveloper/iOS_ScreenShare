@@ -34,8 +34,4 @@ extension UserDefaults {
             fatalError("failed get userdefaults")
         }
     }
-    
-    var broadcastImageData: Data? {
-        return UserDefaults.groupShared.data(forKey: UserDefaults.BROADCAST_IMAGE_KEY)
-    }
 }
