@@ -66,6 +66,8 @@
 		0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
 		0EFF04F22C6790AE004E1DD8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0EFF04F92C6790AE004E1DD8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		0EFF050C2C679817004E1DD8 /* ScreenShare.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ScreenShare.entitlements; sourceTree = "<group>"; };
+		0EFF050D2C679832004E1DD8 /* BroadCast.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BroadCast.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +120,7 @@
 		0EC37FF72C678EC800ECA726 /* ScreenShare */ = {
 			isa = PBXGroup;
 			children = (
+				0EFF050C2C679817004E1DD8 /* ScreenShare.entitlements */,
 				0EC37FF82C678EC800ECA726 /* AppDelegate.swift */,
 				0EC37FFA2C678EC800ECA726 /* SceneDelegate.swift */,
 				0EC37FFC2C678EC800ECA726 /* ViewController.swift */,
@@ -153,6 +156,7 @@
 		0EFF04EF2C6790AE004E1DD8 /* BroadCast */ = {
 			isa = PBXGroup;
 			children = (
+				0EFF050D2C679832004E1DD8 /* BroadCast.entitlements */,
 				0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */,
 				0EFF04F22C6790AE004E1DD8 /* Info.plist */,
 			);
@@ -250,8 +254,8 @@
 			projectRoot = "";
 			targets = (
 				0EC37FF42C678EC800ECA726 /* ScreenShare */,
-				0EC380222C678F6900ECA726 /* ScreenShare_Receiver */,
 				0EFF04EA2C6790AE004E1DD8 /* BroadCast */,
+				0EC380222C678F6900ECA726 /* ScreenShare_Receiver */,
 			);
 		};
 /* End PBXProject section */
@@ -468,6 +472,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenShare/ScreenShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PRV428ULN;
@@ -497,6 +502,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = ScreenShare/ScreenShare.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PRV428ULN;
@@ -579,6 +585,7 @@
 		0EFF05062C6790AE004E1DD8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BroadCast/BroadCast.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PRV428ULN;
@@ -604,6 +611,7 @@
 		0EFF05072C6790AE004E1DD8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = BroadCast/BroadCast.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 8PRV428ULN;
