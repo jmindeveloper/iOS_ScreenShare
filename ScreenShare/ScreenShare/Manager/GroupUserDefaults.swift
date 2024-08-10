@@ -7,6 +7,22 @@
 
 import Foundation
 
+extension CFNotificationName {
+    static let SET_BROADCAST_IMAGE_DATA = CFNotificationName("SET_BROADCAST_IMAGE_DATA" as CFString)
+    /// broadcast 중지 요청
+    static let STOP_BROADCAST = CFNotificationName("STOP_BROADCAST" as CFString)
+    /// broadcast 종료 알림
+    static let FINISH_BROADCAST = CFNotificationName("FINISH_BROADCAST" as CFString)
+}
+
+extension Notification.Name {
+    static let SET_BROADCAST_IMAGE_DATA = Notification.Name("SET_BROADCAST_IMAGE_DATA")
+    /// broadcast 중지 요청
+    static let STOP_BROADCAST = Notification.Name("STOP_BROADCAST")
+    /// broadcast 종료 알림
+    static let FINISH_BROADCAST = Notification.Name("FINISH_BROADCAST")
+}
+
 extension UserDefaults {
     static let BROADCAST_IMAGE_KEY = "BROADCAST_IMAGE_BUFFER_KEY"
     
@@ -21,5 +37,5 @@ extension UserDefaults {
     
     var broadcastImageData: Data? {
         return UserDefaults.groupShared.data(forKey: UserDefaults.BROADCAST_IMAGE_KEY)
-    } 
+    }
 }

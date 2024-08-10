@@ -6,39 +6,72 @@
 //
 
 import ReplayKit
+import Combine
 
 class SampleHandler: RPBroadcastSampleHandler {
 
-    override func broadcastStarted(withSetupInfo setupInfo: [String : NSObject]?) {
-        // User has requested to start the broadcast. Setup info from the UI extension can be supplied but optional. 
-    }
+    private var subscriptions = Set<AnyCancellable>()
     
-    override func broadcastPaused() {
-        // User has requested to pause the broadcast. Samples will stop being delivered.
-    }
-    
-    override func broadcastResumed() {
-        // User has requested to resume the broadcast. Samples delivery will resume.
+    override init() {
+        super.init()
+        print(#function, #file)
+        
+        
+        CFNotificationCenterAddObserver(
+            CFNotificationCenterGetDarwinNotifyCenter(),
+            nil,
+            { (_, _, _, _, _) in
+                NotificationCenter.default.post(name: .STOP_BROADCAST, object: nil)
+            },
+            CFNotificationName.STOP_BROADCAST.rawValue,
+            nil,
+            .deliverImmediately
+        )
+        
+        NotificationCenter.default.publisher(for: .STOP_BROADCAST)
+            .sink { [weak self] _ in
+                let info = [NSLocalizedFailureReasonErrorKey: "화면공유 종료."]
+                let error = NSError(domain: "ScreenShare", code: -1, userInfo: info)
+                
+                self?.finishBroadcastWithError(error)
+            }.store(in: &subscriptions)
     }
     
     override func broadcastFinished() {
-        // User has requested to finish the broadcast.
+        print("broadcast finish", #function)
+        CFNotificationCenterPostNotification(
+            CFNotificationCenterGetDarwinNotifyCenter(),
+            .FINISH_BROADCAST,
+            nil,
+            nil,
+            true
+        )
     }
     
     override func processSampleBuffer(_ sampleBuffer: CMSampleBuffer, with sampleBufferType: RPSampleBufferType) {
-        switch sampleBufferType {
-        case RPSampleBufferType.video:
-            // Handle video sample buffer
-            break
-        case RPSampleBufferType.audioApp:
-            // Handle audio sample buffer for app audio
-            break
-        case RPSampleBufferType.audioMic:
-            // Handle audio sample buffer for mic audio
-            break
-        @unknown default:
-            // Handle other sample buffer types
-            fatalError("Unknown type of sample buffer")
+        if let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) {
+            let ciimage = CIImage(cvPixelBuffer: imageBuffer)
+            let image = convert(ciImage: ciimage)
+            
+            if let data = image.jpegData(compressionQuality: 1) {
+                UserDefaults.groupShared.setValue(data, forKey: UserDefaults.BROADCAST_IMAGE_KEY)
+                CFNotificationCenterPostNotification(
+                    CFNotificationCenterGetDarwinNotifyCenter(),
+                    .SET_BROADCAST_IMAGE_DATA,
+                    nil,
+                    nil,
+                    true
+                )
+            }
         }
+    }
+    
+    // Convert CIImage to UIImage
+    func convert(ciImage: CIImage) -> UIImage {
+        let context = CIContext(options: nil)
+        let cgImage = context.createCGImage(ciImage, from: ciImage.extent)!
+        let image = UIImage(cgImage: cgImage)
+        
+        return image
     }
 }

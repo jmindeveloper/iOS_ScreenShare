@@ -21,6 +21,7 @@
 		0EFF04F12C6790AE004E1DD8 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFF04F02C6790AE004E1DD8 /* SampleHandler.swift */; };
 		0EFF05042C6790AE004E1DD8 /* BroadCast.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 0EFF04EB2C6790AE004E1DD8 /* BroadCast.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		0EFF050F2C679896004E1DD8 /* GroupUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */; };
+		0EFF05132C67995E004E1DD8 /* GroupUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EFF050E2C679896004E1DD8 /* GroupUserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -341,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0EFF05132C67995E004E1DD8 /* GroupUserDefaults.swift in Sources */,
 				0EFF04F12C6790AE004E1DD8 /* SampleHandler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
